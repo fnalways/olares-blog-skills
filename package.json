@@ -1,0 +1,48 @@
+{
+  "name": "olares-blog-skills",
+  "version": "0.1.0",
+  "description": "Agent skills for Olares blog writing, WordPress/Yoast publishing, and editable cover design.",
+  "type": "module",
+  "bin": {
+    "olares-blog-skills": "bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fnalways/olares-blog-skills.git"
+  },
+  "homepage": "https://github.com/fnalways/olares-blog-skills#readme",
+  "bugs": {
+    "url": "https://github.com/fnalways/olares-blog-skills/issues"
+  },
+  "keywords": [
+    "agent-skills",
+    "codex",
+    "claude-code",
+    "olares",
+    "blog",
+    "wordpress",
+    "yoast",
+    "seo",
+    "cover-design"
+  ],
+  "author": "fnalways",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

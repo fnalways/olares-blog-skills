@@ -1,0 +1,4 @@
+interface:
+  display_name: "Olares 博客头图"
+  short_description: "参考设计师 Figma 与官网头图，按主题构图并交付可编辑 SVG 与 PNG"
+  default_prompt: "使用 $olares-blog-cover 为这篇 Olares 博客设计头图，参考设计师 Figma 样本与官网头图，按主题构图，保留独立文字和官方 Logo，交付 SVG 与 PNG。"

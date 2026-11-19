@@ -1,0 +1,4 @@
+interface:
+  display_name: "Olares Blog"
+  short_description: "Write and edit Olares blogs, visuals, SEO, and publication"
+  default_prompt: "Use $olares-blog to complete the requested writing, formatting, or publication work for this Olares post, preserving its approved style and version."
