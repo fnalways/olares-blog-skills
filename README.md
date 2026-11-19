@@ -7,39 +7,42 @@ Two agent skills for producing Olares blog posts and covers, maintained by [fnal
 | `olares-blog` | Writing and editing, release posts, WordPress formatting, Yoast SEO, media handling, draft synchronization, and authorized publication |
 | `olares-blog-cover` | Cover art direction, visual references, editable SVG composition, and wide/social layouts |
 
-## Install from npm
+## Install with npx skills (recommended)
 
-Requires Node.js 20 or newer. Install both skills for Codex:
-
-```sh
-npx olares-blog-skills install
-```
-
-For Claude Code:
+Use the same GitHub-based distribution as `fnalways/olares-writing-skills`:
 
 ```sh
-npx olares-blog-skills install --agent claude
+npx skills add fnalways/olares-blog-skills
 ```
 
-For another agent or a project-specific skills folder:
+The `skills` CLI comes from npm and downloads these two skills from GitHub. Neither the repository owner nor users need an npm account for this installation method. This repository is not published as an `olares-blog-skills` npm registry package.
+
+List the available skills:
 
 ```sh
-npx olares-blog-skills install --dir .agents/skills
+npx skills add fnalways/olares-blog-skills --list
 ```
 
-Codex defaults to `$CODEX_HOME/skills` when set, otherwise `~/.codex/skills`. Claude Code uses `~/.claude/skills`. Open a new agent session after installing.
-
-To update an existing installation:
+Install both for Codex globally, or choose a single skill:
 
 ```sh
-npx olares-blog-skills@latest install --force
+npx skills add fnalways/olares-blog-skills --skill olares-blog olares-blog-cover -a codex -g
+npx skills add fnalways/olares-blog-skills --skill olares-blog-cover
 ```
 
-`--force` backs up existing skill folders under `.olares-blog-skills-backups` beside the destination skills directory before replacing them. Review and merge local customizations from those backups. Without `--force`, existing skills are left untouched. The package has no runtime npm dependencies and no automatic install scripts.
+For Claude Code, use `-a claude-code`. Omit `-g` for a project installation. Open a new agent session after installing. Review existing local customizations before replacing skills.
 
-## Install from GitHub
+## Manual installation and local helper
 
-The repository's `skills/` directory contains standard `SKILL.md` folders. You can clone this repository and copy either folder into your agent's skills directory, including its references, scripts, and assets.
+Clone this repository and copy either folder from `skills/` into your agent's skills directory, including its references, scripts, and assets. Alternatively, the dependency-free local helper requires Node.js 20 or newer:
+
+```sh
+git clone https://github.com/fnalways/olares-blog-skills.git
+cd olares-blog-skills
+node bin/cli.js install
+```
+
+The helper defaults to `$CODEX_HOME/skills`, otherwise `~/.codex/skills`. Use `--agent claude` for `~/.claude/skills`, or `--dir PATH` for a specific skills directory. It refuses existing folders unless `--force` is supplied. Forced replacements are backed up under `.olares-blog-skills-backups` beside the destination skills directory. This backup behavior belongs to the local helper, not to the third-party `skills` CLI.
 
 ## Use
 
@@ -75,10 +78,10 @@ The two skills can be used without the author's private SEO workspace. Additiona
 
 ```sh
 npm test
-npm pack --dry-run
+node bin/cli.js --help
 ```
 
-For a release, review the package contents, update the version, authenticate with npm, and run `npm publish --access public`. Publishing may require npm's browser/2FA verification. GitHub is the source of record for this portable distribution.
+For a release, review the skill contents, run validation, and tag the tested GitHub commit. GitHub is the source of record for this portable distribution. The root package is private to prevent accidental npm publication.
 
 ## License
 

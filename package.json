@@ -17,8 +17,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test",
-    "prepublishOnly": "npm test"
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
@@ -41,8 +40,5 @@
   ],
   "author": "fnalways",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  }
+  "private": true
 }

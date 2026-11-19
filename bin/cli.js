@@ -8,8 +8,8 @@ const names = ['olares-blog', 'olares-blog-cover'];
 const source = resolve(dirname(fileURLToPath(import.meta.url)), '../skills');
 const help = `Olares Blog Skills
 
-  npx olares-blog-skills list
-  npx olares-blog-skills install [--agent codex|claude] [--dir PATH] [--force]
+  node bin/cli.js list
+  node bin/cli.js install [--agent codex|claude] [--dir PATH] [--force]
 
 Default: install both skills into CODEX_HOME/skills or ~/.codex/skills.
 --agent claude uses ~/.claude/skills. --dir specifies a skills directory instead.
