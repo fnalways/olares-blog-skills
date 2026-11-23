@@ -9,7 +9,7 @@ An announcement for one app or feature that explains what it is, why it exists, 
 - A third-party app or agent arriving in Market as a joint story ("what X and Olares built together")
 - A new out-of-the-box scenario on Olares One
 
-Do not use it for version roundups (release post), getting started (tutorial), benchmarks (review), or competitor comparisons (`seo-content`).
+Do not use it for version roundups (release post), getting started (tutorial), benchmarks (review), or head-to-head comparisons ([comparison.md](comparison.md)).
 
 ## Skeleton
 
