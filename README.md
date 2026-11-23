@@ -1,9 +1,10 @@
 # Olares Blog Skills
 
-Two agent skills for producing Olares blog posts and covers, maintained by [fnalways](https://github.com/fnalways).
+Three agent skills for producing Olares blog posts and covers, maintained by [fnalways](https://github.com/fnalways).
 
 | Skill | Purpose |
 | --- | --- |
+| `olares-blog-writer` | Choosing the article type, structuring and drafting posts from type templates and reference samples, and shared rules against shallow or AI-sounding copy |
 | `olares-blog` | Writing and editing, release posts, WordPress formatting, Yoast SEO, media handling, draft synchronization, and authorized publication |
 | `olares-blog-cover` | Cover art direction, visual references, editable SVG composition, and wide/social layouts |
 
@@ -15,7 +16,7 @@ Use the same GitHub-based distribution as `fnalways/olares-writing-skills`:
 npx skills add fnalways/olares-blog-skills
 ```
 
-The `skills` CLI comes from npm and downloads these two skills from GitHub. Neither the repository owner nor users need an npm account for this installation method. This repository is not published as an `olares-blog-skills` npm registry package.
+The `skills` CLI comes from npm and downloads these skills from GitHub. Neither the repository owner nor users need an npm account for this installation method. This repository is not published as an `olares-blog-skills` npm registry package.
 
 List the available skills:
 
@@ -23,10 +24,10 @@ List the available skills:
 npx skills add fnalways/olares-blog-skills --list
 ```
 
-Install both for Codex globally, or choose a single skill:
+Install all three for Codex globally, or choose a single skill:
 
 ```sh
-npx skills add fnalways/olares-blog-skills --skill olares-blog olares-blog-cover -a codex -g
+npx skills add fnalways/olares-blog-skills --skill olares-blog olares-blog-cover olares-blog-writer -a codex -g
 npx skills add fnalways/olares-blog-skills --skill olares-blog-cover
 ```
 
@@ -49,6 +50,9 @@ The helper defaults to `$CODEX_HOME/skills`, otherwise `~/.codex/skills`. Use `-
 Example prompts for Codex:
 
 ```text
+Use $olares-blog-writer to draft a launch overview for this app,
+modeled on the reference article below.
+
 Use $olares-blog to format this approved draft in WordPress and configure Yoast.
 Keep it as a draft.
 

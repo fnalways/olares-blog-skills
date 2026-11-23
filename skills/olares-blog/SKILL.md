@@ -47,6 +47,8 @@ Organize release posts around the release theme, explanations of changes, and th
 
 Choose skills that improve the task rather than loading them for their own sake. Prefer project versions when names overlap.
 
+- `olares-blog-writer`: read when choosing a post's type, structuring a new post, or revising a draft that feels shallow or AI-sounding. It holds the article type templates and reference samples, such as the launch overview.
+
 - `olares-blog-cover`: read when creating or changing a cover. Reuse its design methods while respecting this skill's delivery scope and the user's current preferences.
 - Figma: read the skills required by the current Figma tools before direct access. Export from the latest nodes. Screenshots support verification but do not replace production assets.
 - `lark-doc`: use when reading or writing Feishu drafts.

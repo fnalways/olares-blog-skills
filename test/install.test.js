@@ -23,7 +23,8 @@ test('installs complete skills, refuses overwrites, and backs up forced replacem
     const backup = readdirSync(backups)[0];
     assert.equal(readFileSync(join(backups, backup, 'olares-blog/SKILL.md'), 'utf8'), 'local customization');
     assert.match(readFileSync(file, 'utf8'), /name: olares-blog/);
-    assert.deepEqual(readdirSync(target).sort(), ['olares-blog', 'olares-blog-cover']);
+    assert.ok(existsSync(join(target, 'olares-blog-writer/types/launch-overview.md')));
+    assert.deepEqual(readdirSync(target).sort(), ['olares-blog', 'olares-blog-cover', 'olares-blog-writer']);
     assert.equal(run('install', '--dir').status, 1);
     assert.equal(run('install', '--agent', 'unknown').status, 1);
   } finally { rmSync(root, { recursive: true, force: true }); }

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Olares Blog Writer"
+  short_description: "Write Olares blog posts by article type, with structures and reference samples"
+  default_prompt: "Use $olares-blog-writer to identify this post's article type, confirm product facts, and draft or revise it following that type's structure and the shared writing rules."

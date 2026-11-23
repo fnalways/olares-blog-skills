@@ -4,14 +4,14 @@ import { homedir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const names = ['olares-blog', 'olares-blog-cover'];
+const names = ['olares-blog', 'olares-blog-cover', 'olares-blog-writer'];
 const source = resolve(dirname(fileURLToPath(import.meta.url)), '../skills');
 const help = `Olares Blog Skills
 
   node bin/cli.js list
   node bin/cli.js install [--agent codex|claude] [--dir PATH] [--force]
 
-Default: install both skills into CODEX_HOME/skills or ~/.codex/skills.
+Default: install all skills into CODEX_HOME/skills or ~/.codex/skills.
 --agent claude uses ~/.claude/skills. --dir specifies a skills directory instead.
 Existing skills are never replaced unless --force is given; replacements are backed up.
 No network calls, credentials, or automatic postinstall actions.
