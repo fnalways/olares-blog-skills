@@ -30,7 +30,7 @@ Before writing external-facing content, read the current workspace’s `AGENTS.m
 | Release posts, updates based on PRs/release notes, or comparisons with earlier release posts | Writing and editing, then [Release posts](references/release-blog.md) |
 | Covers, inline visuals, SVG/Figma, captions, image replacement, or lossless WebP compression | [Visuals and images](references/visuals.md) |
 | Search titles, summaries, keywords, Yoast, or social previews | [SEO configuration](references/seo.md) |
-| WordPress formatting (including new-tab links, table style, and font size), drafts, publication, synchronization, or verification | [WordPress operations](references/wordpress.md), plus the SEO reference when configuring SEO |
+| WordPress formatting (including Yoast FAQ blocks, new-tab links, table style, and font size), drafts, publication, synchronization, or verification | [WordPress operations](references/wordpress.md), plus the SEO reference when configuring SEO |
 
 An image-only task does not call for rewriting the article. A copy-only task does not automatically call for a full SEO audit or a new cover.
 
