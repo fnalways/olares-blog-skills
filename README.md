@@ -6,7 +6,7 @@ Three agent skills for producing Olares blog posts and covers, maintained by [fn
 | --- | --- |
 | `olares-blog-writer` | Choosing the article type, structuring and drafting posts from type templates and reference samples, and shared rules against shallow or AI-sounding copy |
 | `olares-blog` | Writing and editing, release posts, WordPress formatting, Yoast SEO, media handling, draft synchronization, and authorized publication |
-| `olares-blog-cover` | Cover art direction, visual references, editable SVG composition, and wide/social layouts |
+| `olares-blog-cover` | Cover art direction, editable SVG composition, and a reusable comparison series in wide, landscape, and square formats |
 
 ## Install with npx skills (recommended)
 
@@ -68,13 +68,14 @@ The skills describe a workflow; they do not supply WordPress, Figma, or image-ge
 - Article-body page links: new tab with `noopener`; same-page anchors and mail/phone links retain normal behavior.
 - Screenshots: lossless WebP when smaller, with decoded pixel verification.
 - Cover pair: **1800×600** header and **1600×900** `_card` social image.
+- Comparison series: when three sizes are requested, use **1800×600**, **1600×900**, and **1200×1200**, with separate compositions. The cover skill includes reusable backgrounds, official-logo examples, and a configurable SVG builder.
 - Preserve approved wording and publication status. Publish or schedule only when requested.
 
 These are authoring defaults, not global WordPress settings. Existing site themes and plugins remain under the site's control.
 
 ## Portability and references
 
-This distribution removes machine-specific paths, private Figma URLs, and local draft thumbnails. It preserves the written design observations and editorial preferences. Historical examples are not current product specifications. Read the current project's brand guidelines and verify product claims against official sources. No credentials, unpublished article drafts, or production exports are included.
+This distribution removes machine-specific paths and private Figma URLs. It preserves the written design observations and editorial preferences, and includes comparison template backgrounds and a review preview for reuse. Historical examples are not current product specifications. Read the current project's brand guidelines and verify product claims against official sources. No credentials or unpublished article drafts are included.
 
 The two skills can be used without the author's private SEO workspace. Additional writing/design skills are optional when available. The included Olares logo is a brand asset subject to its owner's rights; see [NOTICE](NOTICE).
 

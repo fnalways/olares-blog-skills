@@ -1,0 +1,27 @@
+{
+  "title": [
+    "Which AI agent fits",
+    "your workflow?"
+  ],
+  "ink": "#172A3C",
+  "brand": "../olares-logo-black.svg",
+  "backgrounds": {
+    "wide": "blue-wide.png",
+    "landscape": "blue-landscape.png",
+    "square": "blue-square.png"
+  },
+  "products": [
+    {
+      "name": "Goose",
+      "icon": "goose-goose.svg",
+      "tint": "#E2EEF9",
+      "icon_fraction": 0.45517241379310347
+    },
+    {
+      "name": "Codex CLI",
+      "icon": "codex-official.svg",
+      "tint": "#E0F3EE",
+      "icon_fraction": 0.5448275862068965
+    }
+  ]
+}

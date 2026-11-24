@@ -1,0 +1,68 @@
+{
+  "title": [
+    "Looking Beyond",
+    "Suno"
+  ],
+  "ink": "#30233F",
+  "brand": "../olares-logo-black.svg",
+  "backgrounds": {
+    "wide": "peach-wide.png",
+    "landscape": "peach-landscape.png",
+    "square": "peach-square.png"
+  },
+  "products": [
+    {
+      "name": "YuE2 Studio",
+      "icon": "yue2-studio.png",
+      "tint": "#F4E8F4",
+      "icon_fraction": 0.5103448275862069,
+      "crop": {
+        "viewbox": [
+          38,
+          38,
+          180,
+          180
+        ],
+        "radius": 40,
+        "source_width": 256,
+        "source_height": 256
+      }
+    },
+    {
+      "name": "Music Studio",
+      "icon": "music-studio.png",
+      "tint": "#FCE8E6",
+      "icon_fraction": 0.5103448275862069,
+      "engine": "ACE-Step"
+    }
+  ],
+  "secondary": "#715A80",
+  "shadow": "#85638D",
+  "surface": "#FFFAFE",
+  "layouts": {
+    "wide": {
+      "title": [
+        80,
+        282,
+        100,
+        80
+      ]
+    },
+    "landscape": {
+      "title": [
+        80,
+        380,
+        100,
+        80
+      ]
+    },
+    "square": {
+      "title": [
+        80,
+        275,
+        105,
+        88
+      ]
+    }
+  }
+}
