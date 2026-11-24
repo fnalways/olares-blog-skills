@@ -5,6 +5,7 @@ A hands-on "X vs. Y" post that helps a reader choose between two products for th
 ## Use it for
 
 - Two agents, apps, or models that readers weigh against each other and that both run on Olares, such as Goose vs. Codex CLI
+- Two creative studios that turn a prompt into a song, image, or video, such as YuE2 Studio vs. Music Studio (ACE-Step)
 - An open-source app against a closed product it replaces, when we tested both hands-on
 
 Keyword-led "X alternative" or "best X" roundups built from SEO research go to `seo-content`. A head-to-head post can still target an "X vs Y" keyphrase. Benchmarks of a single model stay in the review rules of `olares-blog`.
@@ -26,6 +27,17 @@ Keyword-led "X alternative" or "best X" roundups built from SEO research go to `
 
 Target 1,400 to 2,000 words and four to six images.
 
+### Creative tools
+
+Music, image, and video studios follow [Zapier: Midjourney vs. ChatGPT](https://zapier.com/blog/midjourney-vs-dalle/) more closely than the agent skeleton above. Adjust it this way:
+
+- Open with the results: let readers hear or see both outputs before any explanation.
+- Add "How do X and Y work?" before the table. One paragraph per product on the model and the workflow it creates, such as "writes a score first, then sings it".
+- Three table rows are enough: **Quality**, **Ease of use**, **Power and control**. Add Hardware or Export only when they differ.
+- Give output quality its own verdict H2 ("X makes the better-sounding song"), judged on concrete passages: vocals, arrangement, whether every lyric was sung, the ending.
+- Replace Pricing with **hardware requirements** for local apps. GPU memory and download size often decide the choice, so they can be the ending's deal-breaker.
+- Add **commercial use** as its own H2, based on each model's license. Verify it on the model card and official repository before writing.
+
 ## H2 wording
 
 Where the evidence shows a difference, the heading names the winner: "Codex CLI made the cleaner first build and follow-up edit." Use "Both…" only for genuine ties, such as "Both support Agent Skills." A draft whose H2s mostly start with "Both" has not reached its conclusions yet.
@@ -36,6 +48,11 @@ Where the evidence shows a difference, the heading names the winner: "Codex CLI 
 - Base every verdict on the test or on current official documentation. Say near the claim when it is documentation only.
 - Small differences can decide a heading when they point consistently one way. Qualify them with "In our test" instead of turning them into general rankings.
 - Star ratings are editorial judgments. Flag them for the tester to confirm.
+- Subjective verdicts, such as which song sounds better or which image looks better, come from the person who heard or saw both. If the draft lacks that judgment, add a red callout with the criteria to judge and leave the table row empty. Do not fill it in on their behalf.
+
+## Write the test as a review
+
+Test write-ups drift into procedure: "In Create, I pasted… chose Fixed… clicked Create." Say what you did and what came out, keep only the settings that shape the result (a 120-second length, a tempo change from 123 to 136 BPM), and link the guide for the exact steps. Remove bold UI labels and numbered step lists from the body. Keep short explanations that help a beginner understand what is being edited, such as how notes appear in a piano roll.
 
 ## Olares boundaries
 
@@ -46,7 +63,9 @@ Where the evidence shows a difference, the heading names the winner: "Codex CLI 
 
 - **External model:** [Zapier: Cursor vs. Copilot](https://zapier.com/blog/cursor-vs-copilot/). Keep the framing-question opening, TOC, star-rated table, verdict H2s, pricing section with numbers, deal-breaker ending, and Related reading. Drop the mid-article Zapier integration section. Our equivalent is the short Olares CTA at the end.
 - **External model:** [Zapier: Claude vs. ChatGPT](https://zapier.com/blog/claude-vs-chatgpt/). Shows the H2 mix: mostly winners, "Both" only for ties.
+- **External model for creative tools:** [Zapier: Midjourney vs. ChatGPT](https://zapier.com/blog/midjourney-vs-dalle/). Keep the "How do they work?" section, the three-row ⭐ table, the separate quality and commercial-use sections, and the ease-vs-control framing. Drop the automation section.
 - **Olares:** Goose vs. Codex CLI (Feishu revision, November 2026), the first Olares post written to this pattern.
+- **Olares:** YuE2 Studio vs. Music Studio (Feishu revision, November 2026), the creative-tool version.
 
 ## Sample: Goose vs. Codex CLI (structure in review, November 2026)
 
@@ -66,6 +85,25 @@ The ending's deal-breaker: "If your model service only offers a Chat Completions
 
 Metadata used: H1 *Goose vs. Codex CLI: Which AI agent fits your workflow? [2026]*. SEO title *Goose vs. Codex CLI: Which AI Agent Should You Use? (2026)*. Slug `goose-vs-codex-cli`. Focus keyphrase *goose vs codex cli*, chosen editorially and not research-backed.
 
+## Sample: YuE2 Studio vs. Music Studio (structure in review, November 2026)
+
+H2s in order:
+1. Listen first: One idea, two songs
+2. How do YuE2 Studio and Music Studio work?
+3. YuE2 Studio vs. Music Studio at a glance
+4. Both start from the same lyrics and style prompt
+5. [Pending the listener's verdict] Which studio makes the better-sounding song
+6. Music Studio is easier to start with
+7. YuE2 Studio gives you control over the music itself
+8. YuE2 Studio needs less GPU memory
+9. Commercial use depends on each model's license
+10. YuE2 Studio vs. Music Studio: Which should you use?
+11. Try both studios on Olares
+
+The ending's deal-breaker: "Your GPU may make the choice for you. On Olares, YuE2 Studio needs a GeForce RTX 50 series card, and Music Studio needs an NVIDIA GPU with 24 GiB of memory."
+
+Metadata used: H1 *YuE2 Studio vs. Music Studio: Which local Suno alternative is right for you? [2026]*. SEO title *Local Suno Alternatives: YuE2 Studio vs. Music Studio (2026)*. Focus keyphrase *suno alternatives*, from Semrush research.
+
 ## Questions to settle before drafting
 
 - What single question separates the two products for a reader?
@@ -73,4 +111,5 @@ Metadata used: H1 *Goose vs. Codex CLI: Which AI agent fits your workflow? [2026
 - For each dimension, who wins, and is it from the test or from docs?
 - Is there a deal-breaker that decides the choice outright?
 - Which Olares environment limits showed up in the test, so they stay out of the article?
-- Current pricing for each paid path, verified on official pages.
+- Current pricing for each paid path, verified on official pages. For local apps, hardware requirements and download sizes instead.
+- For creative tools: who listened to or viewed both outputs and can give the quality verdict? What does each model's license allow?
