@@ -65,6 +65,8 @@ The skills describe a workflow; they do not supply WordPress, Figma, or image-ge
 ## Included conventions
 
 - Gutenberg tables: **Stripes**, font size **S**.
+- Code blocks: the smallest named font preset, currently **Small (S)**.
+- Article prose: no English or Chinese semicolons. Preserve required code syntax and exact quotations.
 - Article-body page links: new tab with `noopener`; same-page anchors and mail/phone links retain normal behavior.
 - Screenshots: lossless WebP when smaller, with decoded pixel verification.
 - Cover pair: **1800×600** header and **1600×900** `_card` social image.

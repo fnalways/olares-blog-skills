@@ -34,6 +34,10 @@ Preserve the approved wording, formatting, and links when creating or converting
 
 After saving, read the editable post content and verify that there is exactly one Yoast FAQ block with the expected number of questions. For a published post, check the production page for the rendered `wp-block-yoast-faq-block` markup and Yoast JSON-LD containing `FAQPage` and every saved question. If any of these checks fail, fix the block or report the specific limitation before claiming that FAQ schema is active.
 
+## Code block defaults
+
+For code blocks in posts being created or formatted, use the smallest named font-size preset available in the editor. On the current site this is **Small (S)**, serialized as `fontSize: "small"` with `has-small-font-size` on the `wp-block-code` element. Use the theme preset rather than a custom pixel size. Preserve the code, spacing, and line breaks. This applies to code blocks, not inline code. Read back the saved size after editing. Do not apply it to unrelated existing posts without a request.
+
 ## Table defaults
 
 Use the native Gutenberg Table block for all tables in Olares blog posts being created or formatted. The user's default is **Stripes** style (alternating row backgrounds) and **S** font size. Preserve the header row, column structure, and cell text. Use the theme's preset rather than a guessed pixel size or custom CSS.

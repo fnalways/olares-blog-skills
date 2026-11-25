@@ -25,7 +25,7 @@ For example, the Flash-Next article's hook was the gap between a large model and
 
 These preferences come from explicit feedback in this workflow. Follow different instructions for the current task when given.
 
-- Do not use semicolons in English or Chinese prose. Code syntax and quotations requiring exact reproduction are exceptions.
+- Follow the [punctuation preference in SKILL.md](../SKILL.md#users-punctuation-preference) when writing or revising any article copy.
 - Do not use middle dots as separators in titles, labels, or sentences.
 - Prefer direct affirmative statements. Remove empty defensive phrasing and repetitive “not X, but Y” constructions. Retain limitations that change the conclusion or the reader's actions.
 - Do not announce appeal with “exciting,” “powerful,” or “game-changing.” Show the actual scale, waiting time, completed work, or capability the reader gains.

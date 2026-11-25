@@ -7,6 +7,10 @@ description: "Write, edit, and produce Olares blog posts, including release post
 
 Turn product facts, hands-on experience, and technical material into articles worth reading, then deliver them within the user's authorization. Articles should be engaging, explanatory, and supported by evidence. Plugin scores, test logs, and production details should not dominate the narrative.
 
+## User's punctuation preference
+
+Do not use semicolons in English or Chinese article prose, including headings, tables, captions, excerpts, and SEO or social copy. Rewrite with natural sentences or conjunctions while preserving meaning. Check for both English and Chinese semicolons before delivery. Preserve required code syntax, HTML entities, and quotations that must remain exact.
+
 ## Establish the current scope
 
 Use the conversation and existing files to identify the current draft and version, audience, language, requested changes, approved opening/structure/visuals, destination, and publication status. Ask only when missing information would materially change the result. Otherwise, proceed from context.
@@ -30,7 +34,7 @@ Before writing external-facing content, read the current workspace’s `AGENTS.m
 | Release posts, updates based on PRs/release notes, or comparisons with earlier release posts | Writing and editing, then [Release posts](references/release-blog.md) |
 | Covers, inline visuals, SVG/Figma, captions, image replacement, or lossless WebP compression | [Visuals and images](references/visuals.md) |
 | Search titles, summaries, keywords, Yoast, or social previews | [SEO configuration](references/seo.md) |
-| WordPress formatting (including Yoast FAQ blocks, new-tab links, table style, and font size), drafts, publication, synchronization, or verification | [WordPress operations](references/wordpress.md), plus the SEO reference when configuring SEO |
+| WordPress formatting (including Yoast FAQ blocks, new-tab links, table style, and the smallest code-block font preset), drafts, publication, synchronization, or verification | [WordPress operations](references/wordpress.md), plus the SEO reference when configuring SEO |
 
 An image-only task does not call for rewriting the article. A copy-only task does not automatically call for a full SEO audit or a new cover.
 
