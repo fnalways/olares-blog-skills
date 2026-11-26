@@ -15,8 +15,18 @@ The current site is `https://www.olares.com/blog`. Confirm the post ID, target s
 3. Preserve H2/H3 headings, links, table headers, quotations, code, and ordered lists. Apply the link defaults below. Use native image blocks with `figcaption` and actual media IDs. Avoid one giant HTML block that makes the article difficult to edit.
 4. After inserting images into steps, verify that numbering continues instead of restarting at 1. Apply the table defaults below and keep tables readable on narrow screens without putting every explanation inside a cell.
 5. Upload the cover pair and inline images according to [Visuals and images](visuals.md), with accurate alt text/captions. A cover-only update does not require reuploading inline images.
-6. Query authors and site taxonomies and apply the user's chosen values. On November 5, 2026, `official-recommend` was a **tag**, not a category. Treat homepage recommendation as an explicit publication decision: resolve whether this tag should be present from the current request, approved source, or task record before publishing or scheduling. If its state is still unknown and homepage placement matters, ask once before publishing. Do not silently omit it, and do not add it automatically to every article. Read it back and report its final state with the other taxonomy.
+6. Query authors and site taxonomies and apply the user's chosen values. `official-recommend` is a **tag**, not a category. Before publishing or scheduling, follow the explicit-confirmation rule below for homepage recommendation. Read back and report the final tag state with the other taxonomy.
 7. Configure search and social fields according to [SEO configuration](seo.md), then save in the requested status.
+
+## Homepage recommendation requires an explicit decision
+
+Before publishing or scheduling each post, establish whether the user has explicitly confirmed adding or omitting `official-recommend` for that post. A previous confirmation remains valid within its stated scope, including a confirmation covering both named posts. Do not ask again when that decision is already clear.
+
+- If there is no explicit confirmation, ask the user whether to add `official-recommend`. This is required even when the tag is currently unchecked. Continue preparing the draft, but wait for the answer before publishing or scheduling.
+- The current tag state is not a user decision. An unchecked box, an API response without the tag, silence, or a task record saying “not added” or “preserved existing tags” does not establish that the user chose to omit it. A task record counts only if it records the user's explicit decision and the posts it covers.
+- General approval to publish or schedule does not answer the homepage-recommendation question. Do not infer a yes or no from that approval, and do not add the tag automatically.
+- Record the confirmed choice for each post, apply it, then read it back. Include whether `official-recommend` is present in the publication or scheduling result.
+- If the missing confirmation is discovered after publication or scheduling, disclose it and ask about the tag. Do not silently change tags, unpublish, or cancel a schedule. Read-only questions about the tag do not authorize changing it.
 
 ## Link defaults
 
@@ -69,7 +79,7 @@ When using REST and the admin editor together, remember that the editor may hold
 
 Requests to format, synchronize, or save a draft do not authorize publication. An explicit request to publish the current draft does not need an additional approval round.
 
-Before executing, check the current body, author, categories/tags including the resolved `official-recommend` state, cover pair, captions, links, Yoast FAQ block/schema when an FAQ is present, SEO/social images, and desktop/narrow-screen previews. Stop only when a necessary condition is missing and explain the specific reason. Fix routine issues directly.
+Before executing, check the current body, author, categories/tags including the explicitly user-confirmed `official-recommend` choice under the rule above, cover pair, captions, links, Yoast FAQ block/schema when an FAQ is present, SEO/social images, and desktop/narrow-screen previews. Stop only when a necessary condition is missing and explain the specific reason. Fix routine issues directly.
 
 - Immediate publication: use a supported publishing operation on the confirmed target post only.
 - Scheduling: convert from the user's timezone and verify the WordPress site timezone and UTC. Save the correct future status and report the date/time in the user's timezone. Do not assume the execution machine's timezone is the user's.
