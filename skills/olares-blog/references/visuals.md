@@ -10,18 +10,17 @@ When referencing a style, extract visual characteristics such as palette, whites
 
 For title-readability improvements, preserve the approved background and graphics and change only the necessary typography and spacing. Keep model names and benefit wording within the same title at the same or similar size and weight, with the whole title readable as a thumbnail. Do not reduce key information to a tiny subtitle or treat the 80 px size used in one design as a universal cover rule.
 
-## Paired WordPress cover assets
+## WordPress card cover
 
-The current Olares blog uses this pairing, based on the user's request and site operations verified on November 5, 2026. Recheck when the site behavior changes.
+As of the November 27, 2026 template update and user decision, new blog delivery requires one **1600 × 900 (16:9)** cover, named `article-topic_card.webp` (PNG/JPEG also supported). **Do not create a 1800 × 600 wide version by default.** Additional channel sizes are produced only when requested.
 
-| Purpose | Dimensions | Example filename |
-| --- | --- | --- |
-| Wide article cover / featured image | 1800 × 600 | `article-topic.webp` |
-| Listing card and social sharing | 1600 × 900 | `article-topic_card.webp` |
+Set this card attachment directly as WordPress `featured_media`, and configure the same approved image in Yoast social settings. Check the actual OG/X output separately: a correct listing card does not prove social settings were saved. The post page deliberately does not display a featured hero image. Do not insert the cover at the beginning of the body to compensate.
 
-**The 1600 × 900 filename must end in `_card` before its extension.** The user states that the frontend depends on this convention. Preserve the paired base name. Use `article-topic-v2.webp` and `article-topic-v2_card.webp` for a new version, avoiding an upload renamed to `article-topic_card-1.webp`.
+The current listing helper uses a featured attachment whose filename contains `_card` directly. For new uploads, require the exact `_card` suffix before the extension. Use a collision-free name such as `article-topic-v2_card.webp` and read back the final media ID, filename, dimensions, and URL.
 
-A design discussion may begin with one size. Full WordPress delivery requires both assets, not just the wide version. Compose the title and main visual separately for each aspect ratio rather than stretching. When syncing a new version, update the featured image, paired card, and Yoast social image references.
+Legacy posts may keep a wide featured attachment and a separate card. For that legacy resolver only, the card must be a registered WordPress attachment in the same upload directory, with the same base filename and extension plus `_card`. Preserve existing assets and accepted historical missing-card exceptions. Do not bulk migrate or delete old images as part of a skill or new-post task.
+
+The brief no-text-cover experiment was reverted. Keep approved cover titles and official branding. There is no blanket rule to remove text or logos, shrink listing titles, or clamp excerpts to two lines. Inspect the 16:9 cover together with the actual listing title and excerpt at desktop and phone sizes, not just the full-size image. Editable source files and independently composed requested variants remain required.
 
 ## Inline images and captions
 

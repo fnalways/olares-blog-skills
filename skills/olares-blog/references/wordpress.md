@@ -14,9 +14,22 @@ The current site is `https://www.olares.com/blog`. Confirm the post ID, target s
 2. Convert the body to editable Gutenberg blocks. Start with the first paragraph. The WordPress title field supplies the page title, so do not insert a duplicate H1 in the body. This is a site formatting convention, not a universal search-ranking rule.
 3. Preserve H2/H3 headings, links, table headers, quotations, code, and ordered lists. Apply the link defaults below. Use native image blocks with `figcaption` and actual media IDs. Avoid one giant HTML block that makes the article difficult to edit.
 4. After inserting images into steps, verify that numbering continues instead of restarting at 1. Apply the table defaults below and keep tables readable on narrow screens without putting every explanation inside a cell.
-5. Upload the cover pair and inline images according to [Visuals and images](visuals.md), with accurate alt text/captions. A cover-only update does not require reuploading inline images.
+5. Upload the 1600 × 900 card cover and inline images according to [Visuals and images](visuals.md), with accurate alt text/captions. A cover-only update does not require reuploading inline images.
 6. Query authors and site taxonomies and apply the user's chosen values. `official-recommend` is a **tag**, not a category. Before publishing or scheduling, follow the explicit-confirmation rule below for homepage recommendation. Read back and report the final tag state with the other taxonomy.
 7. Configure search and social fields according to [SEO configuration](seo.md), then save in the requested status.
+
+## Current template and editorial fields
+
+The November 2026 layout supplies the global navigation, footer, shared newsletter form, title area, author/date/share controls, table of contents, author bio, and related articles. Do not recreate these elements inside each post. Use editable semantic blocks and let the template control body width, typography, spacing, and mobile overflow. Preserve the table and code block defaults below.
+
+- Write an explicit, concise excerpt that stands on its own without merely repeating the title. It is used in listings and the article title area. The article template only displays an introduction when an explicit excerpt exists.
+- Use H2/H3 headings and preserve meaningful existing anchors. The template generates a desktop table of contents and a collapsible mobile version when there is more than one eligible heading. Do not add a manual table of contents to new posts or mass-delete legacy ones.
+- Keep inline screenshots, diagrams, captions, semantic tables, and code. Check mobile table/code scrolling and readable images instead of adding per-post CSS or screenshotting tables.
+- Check the author, category, and relevant profile information because archives and article pages display them. The article date is the original publication date. Do not change it for a cosmetic update or treat administrative modification time as a substantive update date.
+- The blog home has one featured article, categories/search, then regular posts in descending publication order. WordPress native `sticky` controls the featured selection, with the latest published sticky winning. Set sticky only when explicitly selected for this role, and otherwise preserve an existing post's sticky state. New regular posts are not sticky by default. Search retains its own relevance ordering.
+- Blog `sticky` and the `official-recommend` tag are separate settings. The tag decision rule below remains in force and does not authorize changing sticky.
+
+After publication, inspect the listing card with its title/excerpt, article title area without a cover, generated heading anchors/TOC when applicable, and desktop/mobile body. Check relevant category/author/search views when changing their metadata. Layout inspection does not authorize editing the global template.
 
 ## Homepage recommendation requires an explicit decision
 
@@ -67,9 +80,9 @@ Before editing, save a recoverable snapshot of the target post and necessary med
 
 For image synchronization:
 
-1. Export both sizes from the latest approved design and verify appearance and dimensions.
-2. Choose collision-free paired filenames, such as `topic-v2.webp` and `topic-v2_card.webp`. Check final URLs after uploading, not just local filenames.
-3. Associate the images with the post, using the wide image as featured image and the card as the Yoast social image. If the site has another card field, update it through its actual schema/admin settings. A filename alone does not prove the setting took effect.
+1. Export the approved 1600 × 900 card and verify its appearance and dimensions. A wide image is not required.
+2. Choose a collision-free filename such as `topic-v2_card.webp`. Check the final URL and filename after uploading.
+3. Set the card attachment directly as the post's featured image and configure it as the Yoast social image. Verify the rendered listing and social metadata separately. Legacy pairs may remain unchanged when outside the requested image scope.
 4. Save without changing fields outside the image scope. Update an independent old X image if one exists.
 5. Read the remote post again and compare the body, title, slug, author, categories, tags, SEO copy, and status. Investigate unexpected changes before attempting recovery. Do not overwrite concurrent user edits with an old full-post rollback.
 
@@ -79,7 +92,7 @@ When using REST and the admin editor together, remember that the editor may hold
 
 Requests to format, synchronize, or save a draft do not authorize publication. An explicit request to publish the current draft does not need an additional approval round.
 
-Before executing, check the current body, author, categories/tags including the explicitly user-confirmed `official-recommend` choice under the rule above, cover pair, captions, links, Yoast FAQ block/schema when an FAQ is present, SEO/social images, and desktop/narrow-screen previews. Stop only when a necessary condition is missing and explain the specific reason. Fix routine issues directly.
+Before executing, check the current body, author, categories/tags including the explicitly user-confirmed `official-recommend` choice under the rule above, card cover, captions, links, Yoast FAQ block/schema when an FAQ is present, SEO/social images, and desktop/narrow-screen previews. Stop only when a necessary condition is missing and explain the specific reason. Fix routine issues directly.
 
 - Immediate publication: use a supported publishing operation on the confirmed target post only.
 - Scheduling: convert from the user's timezone and verify the WordPress site timezone and UTC. Save the correct future status and report the date/time in the user's timezone. Do not assume the execution machine's timezone is the user's.
@@ -93,10 +106,10 @@ Use the skill's read-only local checker for saved API JSON:
 
 ```bash
 python3 <skill-dir>/scripts/check_wp_snapshot.py post.json \
-  --media cover-pair.json --expected-status draft \
+  --media cover-media.json --expected-status draft \
   --before previous-post.json --images-only
 ```
 
-`post.json` is a WordPress post object fetched in edit context. `cover-pair.json` contains `header` and `card`, each with `id`, `source_url`, and `media_details.width/height`. The checker does not access the network or write to WordPress and does not replace visual inspection. Use `--expected-author` to check a specified author ID.
+`post.json` is a WordPress post object fetched in edit context. `cover-media.json` contains `card`, with `id`, `source_url`, and `media_details.width/height`. The default check expects that card as `featured_media`. For an existing legacy pair only, supply both `header` and `card` and pass `--legacy-pair`. This compatibility mode does not require a wide image for new delivery. The checker does not access the network or write to WordPress and does not replace visual inspection. Use `--expected-author` to check a specified author ID.
 
 Deliver a brief report with the edit/preview/production link, actual status, and changes made. For browser updates, save and show evidence screenshots as required by the tool instructions. A successful upload is not publication, and synchronized source files do not prove that frontend caches have refreshed.

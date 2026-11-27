@@ -40,6 +40,10 @@ An image-only task does not call for rewriting the article. A copy-only task doe
 
 Organize release posts around the release theme, explanations of changes, and their practical significance, as described in the release reference. Tutorial, review, and procedural guidance applies only to the relevant content. Release feature sections do not each need an entry point and instructions. A blog-only task does not include changelog, WeChat, forum, or social copy, and does not require loading the old `olares-release-writer` channel templates.
 
+## Current blog template
+
+For new WordPress posts, deliver one 1600 × 900 `_card` cover as both the featured attachment and the configured social image. No 1800 × 600 wide cover is required by default. The article page intentionally omits the cover. Use an explicit excerpt and semantic H2/H3 headings, letting the template handle typography and the table of contents. See the visual and WordPress references for delivery, legacy compatibility, and verification.
+
 ## Collaboration and versions
 
 - Preserve approved wording and versions. A whole-article review does not authorize replacing an approved hook. For a requested rollback, find the historical draft. If unavailable, say so rather than presenting a reconstruction as the original.

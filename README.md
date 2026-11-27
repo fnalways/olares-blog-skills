@@ -57,7 +57,7 @@ Use $olares-blog to format this approved draft in WordPress and configure Yoast.
 Keep it as a draft.
 
 Use $olares-blog-cover to design an editable cover for this article.
-Deliver a 1800×600 header and a 1600×900 social card.
+Deliver a 1600×900 _card cover for the blog listing and social sharing.
 ```
 
 The skills describe a workflow; they do not supply WordPress, Figma, or image-generation access. Configure the relevant connectors or credentials in your own environment. Never commit credential files. Python 3 is needed for the bundled helper scripts. Screenshot compression additionally uses `cwebp` and Pillow. A renderer such as Sharp is needed when exporting SVG to PNG. These tools are not installed automatically.
@@ -69,7 +69,8 @@ The skills describe a workflow; they do not supply WordPress, Figma, or image-ge
 - Article prose: no English or Chinese semicolons. Preserve required code syntax and exact quotations.
 - Article-body page links: new tab with `noopener`; same-page anchors and mail/phone links retain normal behavior.
 - Screenshots: lossless WebP when smaller, with decoded pixel verification.
-- Cover pair: **1800×600** header and **1600×900** `_card` social image.
+- Blog cover: one **1600×900** `_card` image, used as the featured attachment and configured social image. No wide cover is required by default. Article pages omit the hero cover. Legacy wide/card pairs remain supported.
+- Article layout: explicit excerpts, semantic H2/H3 headings, and template-generated navigation and table of contents. Blog featured selection uses native sticky posts, separately from the `official-recommend` tag.
 - Comparison series: when three sizes are requested, use **1800×600**, **1600×900**, and **1200×1200**, with separate compositions. The cover skill includes reusable backgrounds, official-logo examples, and a configurable SVG builder.
 - Preserve approved wording and publication status. Publish or schedule only when requested.
 
